@@ -1,8 +1,5 @@
 {% load i18n l10n %}
-<style type="text/css">{% get_current_language_bidi as LANGUAGE_BIDI %}
-    #{{ id }}_map .aligned label { float: inherit; }
-    {% if not display_raw %}#{{ id }} { display: none; }{% endif %}
-</style>
+{% get_current_language_bidi as LANGUAGE_BIDI %}
 
 <div id="{{ id }}_div_map" style="position: relative; vertical-align: top; float: {{ LANGUAGE_BIDI|yesno:"right,left" }};">
     <div id="{{ id }}_map" style="width: {{ map_width }}px; height: {{ map_height }}px;"></div>
